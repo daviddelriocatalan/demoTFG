@@ -1,0 +1,85 @@
+<div class="contenedor">
+  <div class="layout_principal">
+    <div class="layout_titulillo">
+      <div class="parrafo">
+        <div class="titulillo">
+          <h2>VUESTRA FINCAS EN LAS MEJORES MANOS</h2>
+        </div>
+      </div>
+    </div>
+    <div class="layout_parrafo">
+      <div class="parrafo">
+        <p>
+          Para gestionar una comunidad de manera eficiente y transparente
+          es indispensable disponer de los mejores profesionales. En <strong>FincasVALENCIA</strong>,
+          contamos con los mejores especialistas y administradores de fincas colegiados,
+          los cuales utilizan sistemas de gestión de última generación para garantizar una excelente gestión.
+        </p>
+      </div>
+    </div>
+    <div class="layout_valores">
+      <div class="layout-servicios">
+
+        <div class="layout-subtitulo">
+          <div class="subtitulo">
+            <h2>¿POR QUÉ ELEGIRNOS?</h2>
+          </div>
+        </div>
+
+        <div class="layout-servicio1">
+          <div class="servicio">
+            <mat-icon>group</mat-icon>
+            <h4>LOS MEJORES PROFESIONALES</h4>
+          </div>
+        </div>
+
+        <div class="layout-servicio2">
+          <div class="servicio servicio--gris">
+            <mat-icon>star_border</mat-icon>
+            <h4>PASIÓN POR NUESTRO TRABAJO</h4>
+          </div>
+        </div>
+
+        <div class="layout-servicio3">
+          <div class="servicio">
+            <mat-icon> sentiment_satisfied_alt</mat-icon>
+            <h4>TRANSPARENCIA</h4>
+          </div>
+        </div>
+
+        <div class="layout-servicio4">
+          <div class="servicio servicio--gris">
+            <mat-icon> attach_money</mat-icon>
+            <h4>PRECIOS ASEQUIBLES</h4>
+          </div>
+        </div>
+
+        <div class="layout-servicio5">
+          <div class="servicio">
+            <mat-icon>school</mat-icon>
+            <h4>TITULADOS Y CERTIFICADOS</h4>
+          </div>
+        </div>
+
+        <div class="layout-servicio6">
+          <div class="servicio servicio--gris">
+            <mat-icon>thumb_up_alt</mat-icon>
+            <h4>GARANTIA</h4>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="layout_carousel">
+      <div class="contenedor_imagen" *ngIf="renderCarousel">
+        <mat-carousel timings="250ms ease-in" [autoplay]="true" interval="5000" color="accent" maxWidth="900"
+          proportion="45" slides="3" [loop]="true" [hideArrows]="true" [hideIndicators]="true" [useKeyboard]="true"
+          [useMouseWheel]="false" orientation="ltr">
+          <mat-carousel-slide *ngFor="let imagen of imagenes; let i = index" [image]="imagen" overlayColor="#00000040"
+            [hideOverlay]="false">
+          </mat-carousel-slide>
+        </mat-carousel>
+      </div>
+    </div>
+  </div>
+</div>

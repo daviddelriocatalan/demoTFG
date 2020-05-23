@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.img-contentful {
+  max-width: 200px;
+  height: auto;
+
+  display: flex;
+  margin: 0 auto;
+}
+.img-contentful:hover {
+  border: 1px solid rgba(244, 81, 30, 0.35)
+}
+html, body { height: 100%; }
+/*body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }*/

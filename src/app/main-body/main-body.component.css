@@ -1,0 +1,154 @@
+/*LAYOUTS*/
+.layout_principal{
+    display: grid;
+    grid-template-areas:
+    "titulillo" 
+    "parrafo"
+    "valores"
+    "carousel";
+    width: 900px;
+}
+
+.layout_titulillo{
+    grid-area: titulillo;
+}
+
+.layout_parrafo{
+    grid-area: parrafo;
+}
+
+.layout_valores{
+    grid-area: valores;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.layout_carousel{
+    grid-area: carousel;
+}
+
+.layout-servicios{
+    display: grid;
+    grid-template-areas: 
+    "subtitulo subtitulo subtitulo"
+    "servicio1 servicio2 servicio3"
+    "servicio4 servicio5 servicio6";
+    width: 900px;
+}
+@media screen and (max-width: 900px) {
+    .layout-servicios{
+        grid-template-areas: 
+        "subtitulo"
+        "servicio1"
+        "servicio2"
+        "servicio3"
+        "servicio4"
+        "servicio5"
+        "servicio6";
+        width: auto;
+    }
+}
+
+.layout-subtitulo{
+    grid-area: subtitulo;
+}
+
+.layout-servicio1{
+    grid-area: servicio1;
+    width: 300px;
+}
+
+.layout-servicio2{
+    grid-area: servicio2;
+    width: 300px;
+}
+
+.layout-servicio3{
+    grid-area: servicio3;
+    width: 300px;
+}
+
+.layout-servicio4{
+    grid-area: servicio4;
+    width: 300px;
+}
+
+.layout-servicio5{
+    grid-area: servicio5;
+    width: 300px;
+}
+
+.layout-servicio6{
+    grid-area: servicio6;
+    width: 300px;
+}
+
+/*COMPONENTES*/
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+}
+
+.parrafo{
+    margin: 10px;
+    width: 900px;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 30px;
+}
+@media screen and (max-width: 900px) {
+    .parrafo{
+        width: auto;
+    }
+}
+
+.titulillo{
+    justify-content: center;
+    text-align: center;
+}
+
+.subtitulo{
+    justify-content: center;
+    text-align: center;
+}
+
+.servicio{
+    margin: 20px;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+    height: 115px;
+    
+
+    border: 1px solid;
+    border-radius: 10px;
+    box-shadow: 5px 10px 8px #888888;
+}
+.servicio--gris{
+    background-color: #C5C3C6;
+}    
+@media screen and (max-width: 900px) {
+    .servicio{
+        width: auto;
+    }
+}
+
+.servicio:hover{
+    transform: scale(1.1);
+    background-color: #00d6bd;
+}
+
+.contenedor_imagen{
+    width: auto;
+    height: auto;
+
+    margin-top: 20px;
+  
+    /*Para centrar*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }

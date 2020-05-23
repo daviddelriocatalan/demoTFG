@@ -1,0 +1,20 @@
+.container{
+    text-align: center;
+}
+
+.panel{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 690px) {
+    .panel{
+        width: auto;
+    }    
+}
+
+.gif{
+    width: 240px;
+    height: 246px;
+}

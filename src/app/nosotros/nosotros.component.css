@@ -1,0 +1,61 @@
+/*LAYOUTS - ESTRUCTURA DE LA PAGINA*/
+.layout_nosotros{
+    display: grid;
+    grid-template-areas: 
+    "sobrenosotros"
+    "elegirnos"
+    "donde"
+    "gestion"
+    "colegiacion";
+}
+
+.layout_sobrenosotros{
+    grid-area: sobrenosotros;
+}
+
+.layout_elegirno{
+    grid-area: elegirnos;
+}
+
+.layout_donde{
+    grid-area: donde;
+}
+
+.layout_gestion{
+    grid-area: gestion;
+}
+
+.layout_colegiacion{
+    grid-area: colegiacion;
+}
+
+/*COMPONENTES*/
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+}
+
+.parrafo{
+    margin: 10px;
+    padding: 10px;
+    width: 900px;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 30px;
+}
+@media screen and (max-width: 690px) {
+    .parrafo{
+        padding: 0px;
+        margin: 5px;
+        width: auto;
+    }    
+}    
+
+.titulo{
+    justify-content: center;
+    text-align: center;
+}

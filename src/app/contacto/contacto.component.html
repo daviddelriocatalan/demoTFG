@@ -1,0 +1,101 @@
+<div class="contenedor">
+
+  <div class="layout_formulario">
+
+    <div class="layout-titulo">
+      <div class="titulo">
+        <h1>CONTACTO</h1>
+      </div>
+    </div>
+    
+    <div class="layout-subtitulo">
+      <div class="subtitulo">
+        <p>Contáctanos y en menos de 24 horas te responderemos.</p>
+      </div>
+    </div>
+
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" data-netlify-recaptcha="true">
+      <div class="layout_nombre">
+        <div class="formulario_nombre">
+          <mat-form-field class="nombre">           
+            <mat-label>Nombre</mat-label>
+            <input name="nombre" matInput type="text" [formControl]="nombreFormControl" [(ngModel)]="nombre">
+            <mat-error *ngIf="nombreFormControl.hasError('required')">
+              Nombre <strong>necesario</strong>
+            </mat-error>
+            <button mat-button *ngIf="nombre" matSuffix mat-icon-button aria-label="Clear" (click)="nombre=''"
+              class="formulario_boton_limpiar">
+              <mat-icon>close</mat-icon>
+            </button>
+  
+          </mat-form-field>
+        </div>
+      </div>
+  
+      <div class="layout_apellidos">
+        <div class="formulario_apellidos">
+          <mat-form-field class="apellidos">
+            <mat-label>Apellidos</mat-label>
+            <input name="apellidos" matInput type="text" [formControl]="apellidosFormControl" [(ngModel)]="apellidos">
+            <mat-error *ngIf="apellidosFormControl.hasError('required')">
+              Apellidos <strong>necesarios</strong>
+            </mat-error>
+            <button mat-button *ngIf="apellidos" matSuffix mat-icon-button aria-label="Clear" (click)="apellidos=''"
+              class="formulario_boton_limpiar">
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+      </div>
+  
+      <div class="layout_correo">
+        <div class="formulario_correo">
+          <mat-form-field class="correo">
+            <mat-label>Email</mat-label>
+            <input name="correo" matInput [formControl]="emailFormControl" placeholder="HectorCondomin@carteras.com"
+              [(ngModel)]="email">
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+              Introduce un correo válido
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Email <strong>necesario</strong>
+            </mat-error>
+            <button mat-button *ngIf="email" matSuffix mat-icon-button aria-label="Clear" (click)="email=''"
+              class="formulario_boton_limpiar">
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+      </div>
+  
+      <div class="layout_comentario">
+        <div class="formulario_comentario">
+          <mat-form-field class="comentario">
+            <mat-label>Deja un comentario</mat-label>
+            <textarea matInput type="text" [formControl]="comentarioFormControl" placeholder=""
+              [(ngModel)]="comentario"></textarea>
+            <mat-error *ngIf="comentarioFormControl.hasError('required')">
+              Comentario <strong>necesario</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="captcha" data-netlify-recaptcha="true"></div>
+
+      <div class="layout_boton">
+        <div class="formulario_boton"
+          *ngIf="!nombreFormControl.hasError('required') && !apellidosFormControl.hasError('required') && !emailFormControl.hasError('required') && !emailFormControl.hasError('email') && !comentarioFormControl.hasError('required')">
+          <button class="boton_enviar" type="submit" mat-raised-button (click)="openDialog()">
+            <span class="texto_boton_enviar">
+              Enviar
+            </span>
+          </button>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+
+</div>

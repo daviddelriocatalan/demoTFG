@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="page-header">
+    <h2>Entradas de nuestro blog</h2>
+    <p class="small">
+      Aquí puedes encontrar algunos artículos que pueden ayudarte si quieres más
+      información sobre la Administración de Fincas
+    </p>
+  </div>
+  <div class="contianer-fluid">
+    <div class="col-xs-12 col-md-8">
+      <div class="row" *ngFor="let post of postsList">
+        <div
+          class="container-fluid blog-post"
+          routerLink="/blog/{{ post.sys.id }}"
+        >
+          <div class="col-xs-4 middle-align">
+            <div href="#" class="thumbnail">
+              <img
+                src="{{ post.fields.thumbnail.fields.file.url }}"
+                alt="{{ post.fields.thumbnail.fields.file.title }}"
+              />
+            </div>
+          </div>
+          <div class="col-xs-8 thumbnail-height">
+            <h3>{{ post.fields.title }}</h3>
+            <div
+              [innerHTML]="post.fields.bodyPreview"
+              class="post-preview"
+              style="-webkit-box-orient: vertical"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <div class="panel">
+        <div class="panel-heading">
+          Echa un ojo a todas nuestras publicaciones
+        </div>
+        <div class="panel-body">
+          <div class="list-group" *ngIf="dateTree.length > 0">
+            <div *ngFor="let mes of dateTree" class="month-panel">
+              <button
+                class="list-group-item naranjito"
+                (click)="onToggleMonth(mes)"
+              >
+                {{ mes.mesanyo }}
+              </button>
+              <div
+                class="entries-panel"
+                *ngIf="mes.activa === 'true'"
+                [@postsMes]="mes.activa"
+              >
+                <div
+                  class="entry-link-container"
+                  *ngFor="let post of mes.posts"
+                >
+                  <a routerLink="/blog/{{ post.id }}">{{ post.titulo }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

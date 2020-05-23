@@ -1,0 +1,151 @@
+/*LAYOUTS - ESTRUCTURA PAGINA*/
+.layout_formulario{
+    display: grid;
+    grid-template-areas: 
+    "titulo"
+    "subtitulo"
+    "nombre"
+    "apellidos"
+    "correo"
+    "comentario"
+    "boton";
+}
+
+.layout_titulo{
+    grid-area: titulo;
+}
+
+.layout_subtitulo{
+    grid-area: subtitulo;
+}
+
+.layout_nombre{
+    grid-area: nombre;
+}
+
+.layout_apellidos{
+    grid-area: apellidos;
+}
+
+.layout_correo{
+    grid-area: correo;
+}
+
+.layout_comentario{
+    grid-area: comentario;
+}
+
+.layout_boton{
+    grid-area: boton;
+}
+
+/*COMPONENTES*/
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+}
+
+.formulario_nombre{
+    margin: 10px;
+}
+
+.nombre{
+    width: 100%;
+}
+
+.formulario_apellidos{
+    margin: 10px;
+}
+
+.apellidos{
+    width: 100%;
+}
+
+.formulario_correo{
+    margin: 10px;
+}
+
+.correo{
+    width: 100%;
+}
+
+.formulario_comentario{
+    margin: 10px;
+}
+
+.comentario{
+    width: 100%;
+}
+
+.formulario_boton{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton_enviar{
+    margin: 0px 20px;
+    float: right;
+
+    text-decoration: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 60px;
+    width: 210px;
+    opacity: 1;
+    background-color: #ffffff;
+    border: 1px solid rgba(22, 76, 167, 0.6);
+    border-radius: 10px;
+}
+
+.texto_boton_enviar{
+    color: rgba(22, 76, 167, 1);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+}
+
+.boton_enviar:hover {
+animation: rotate 0.7s ease-in-out both;
+}
+
+.texto_boton_enviar:hover{
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+
+@keyframes rotate {
+    0%   {transform: rotate(0deg) translate3d(0, 0, 0)}
+    25%  {transform: rotate(3deg) translate3d(0, 0, 0)}
+    50%  {transform: rotate(-3deg) translate3d(0, 0, 0)}
+    75%  {transform: rotate(1deg) translate3d(0, 0, 0)}
+    100% {transform: rotate(0deg) translate3d(0, 0, 0)}
+}
+
+@keyframes storm {
+    0%   {transform: translate3d( 0, 0, 0) translateZ(0)}
+    25%  {transform: translate3d( 4px, 0, 0) translateZ(0)}
+    50%  {transform: translate3d( -3px, 0, 0) translateZ(0)}
+    75%  {transform: translate3d( 2px, 0, 0) translateZ(0)}
+    100% {transform: translate3d( 0, 0, 0) translateZ(0)}
+  }
+
+.formulario_boton_limpiar{
+    color: grey; 
+    border: none;
+    background-color: white;
+}
+
+.formulario_boton_limpiar:hover{
+    color: black;
+    border: none;
+    background-color: white;
+}

@@ -1,0 +1,74 @@
+/*LAYOUTS - ESTRUCTURA PAGINA*/
+.layout-servicios{
+    display: grid;
+    grid-template-areas: 
+    ". titulo ."
+    ". subtitulo ."
+    "servicio1 servicio2 servicio3"
+    "servicio4 servicio5 servicio6";
+}
+
+.layout-titulo{
+    grid-area: titulo;
+}
+
+.layout-subtitulo{
+    grid-area: subtitulo;
+}
+
+.layout-servicio1{
+    grid-area: servicio1;
+}
+
+.layout-servicio2{
+    grid-area: servicio2;
+}
+
+.layout-servicio3{
+    grid-area: servicio3;
+}
+
+.layout-servicio4{
+    grid-area: servicio4;
+}
+
+.layout-servicio5{
+    grid-area: servicio5;
+}
+
+.layout-servicio6{
+    grid-area: servicio6;
+}
+
+/*COMPONENTES*/
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+}
+
+.titulo{
+    justify-content: center;
+    text-align: center;
+}
+
+.subtitulo{
+    justify-content: center;
+    text-align: center;
+}
+
+.servicio{
+    margin: 20px;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+
+    border: 1px solid;
+    box-shadow: 5px 10px 8px #888888;
+}
+
+.servicio:hover{
+    transform: scale(1.1);
+}

@@ -1,0 +1,87 @@
+@keyframes icon-animation {
+  0% {
+    color: #00af9a;
+  }
+  50% {
+    color: #00d6bd;
+  }
+  100% {
+    color: #00af9a;
+  }
+}
+
+.header-title {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 214, 189, 1),
+    rgba(255, 255, 255, 1)
+  );
+  color: black; 
+
+  min-height: 8.125rem;
+}
+
+.page-header {
+  border-bottom: 0px solid black;
+  padding-top: 2.5rem;
+  padding-left: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.entries-panel {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(220, 220, 221, 1),
+    rgba(255, 255, 255, 1)
+  );
+  padding-top: 0.625rem;
+  padding-bottom: 2.5rem;
+}
+
+.panel-heading {
+  background-color: #00af9a;
+  border-top: 1px solid #46494c;
+  border-bottom: 1px solid #46494c;
+  color: white;
+  border-top-left-radius: 0px; 
+  border-top-right-radius: 0px;
+}
+
+.entry-link-container {
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-left: 0.625rem;
+  /*margin-top: 10px;
+  /* list-style-image: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-right-128.png'); */
+}
+
+.entry-link-container > a {
+  color: #00af9a;
+}
+.entry-link-container > a:hover {
+  color: #00d6bd;
+}
+
+.panel-author-date {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.1875rem;
+}
+
+.panel-author-date > span {
+  font-size: 1.25rem;
+}
+
+.icon-color {
+  animation-name: icon-animation;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+}
+
+.naranjito {
+  background-color: #00af9a;
+  border-color: #46494c;
+  color: white;
+  text-transform: uppercase;
+}

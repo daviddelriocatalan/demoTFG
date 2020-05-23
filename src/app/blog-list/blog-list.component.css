@@ -1,0 +1,77 @@
+.thumbnail-height {
+  overflow: hidden;
+}
+
+.post-preview {
+  -webkit-line-clamp: 5;
+  display: -webkit-box;
+  margin-bottom: 0;
+  color: #46494c;
+}
+
+.blog-post {
+  margin-bottom: 10px;
+}
+.blog-post:hover {
+  cursor: pointer;
+  background: #00d6bd;
+  color: white;
+}
+
+.month-panel {
+  padding-bottom: 10px;
+}
+
+.entries-panel {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(220, 220, 221, 1),
+    rgba(255, 255, 255, 1)
+  );
+  padding-top: 0.625rem;
+  padding-bottom: 2.5rem;
+}
+
+.panel-heading {
+  background-color: #00af9a;
+  border-top: 1px solid #46494c;
+  border-bottom: 1px solid #46494c;
+  color: white;
+  border-top-left-radius: 0px; 
+  border-top-right-radius: 0px;
+}
+
+.entry-link-container {
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-left: 10px;
+  /*margin-top: 10px;
+  /* list-style-image: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-right-128.png'); */
+}
+
+.entry-link-container > a {
+  color: #00af9a;
+}
+.entry-link-container > a:hover {
+  color: #00d6bd;
+}
+
+.naranjito {
+  background-color: #00af9a;
+  border-color: #46494c;
+  color: white;
+  text-transform: uppercase;
+}
+
+/***
+Colores tema naranja:
+  Naranja primario: #f4511e
+  Naranja secundario: #fa7d55
+  Naranja terciario: #FA9E81
+  Naranja sombra: #9F2E0A
+
+  Verde complementario: #15A85F
+
+  https://colorschemedesigner.com/csd-3.5/
+*/
